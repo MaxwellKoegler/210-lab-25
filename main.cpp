@@ -24,7 +24,9 @@ int main() {
 
     ifstream fin("codes.txt");
 
-    start chrono::
+    start = chrono::high_resolution_clock::now();
+    
+    while(fin >> code})
 
 
 

@@ -17,6 +17,19 @@ int main() {
     set<string> s;
     string code;
 
+    long times[4][3];
+
+    chrono::high_resolution_clock::time_point start;
+    chrono::high_resolution_clock::time_point end;
+
+    ifstream fin("codes.txt");
+
+    start chrono::
+
+
+
+
+
     return 0;
 }
 

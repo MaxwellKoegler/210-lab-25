@@ -26,8 +26,26 @@ int main() {
 
     start = chrono::high_resolution_clock::now();
     
-    while(fin >> code})
+    while(fin >> code) {
+        v.push_back(code);
+    }
 
+    end = chrono::high_resolution_clock::now();
+    times[0][0] == chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+    fin.close();
+
+    fin.open("codes.txt");
+
+    start = chrono::high_resolution_clock::now();
+
+    while(fin >> code) {
+        l.push_back(code);
+    } 
+
+    end = chrono::high_resolution_clock::now();
+    times[0][1] = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+
+    fin.close();
 
 
 

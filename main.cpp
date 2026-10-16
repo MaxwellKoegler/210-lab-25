@@ -47,6 +47,21 @@ int main() {
 
     fin.close();
 
+    fin.open("codes.txt");
+
+    start = chrono::high_resolution_clock::now();
+
+    while(fin >> code) {
+        s.insert(code);
+    }
+
+    end = chrono::high_resolution_clock::now();
+    times[0][2] = chrono::duration_cast<chrono::nanoseconds>(end-start).count();
+
+    fin.close();
+
+    start = chrono::high_resolution_clock::now();
+    
 
 
 

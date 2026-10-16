@@ -98,14 +98,34 @@ int main() {
     end = chrono::high_resolution_clock::now();
     times[2][2] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 
+    start = chrono::high_resolution_clock::now();
+
+    v.erase(v.begin() + v.size() / 2);
+
+    end = chrono::high_resolution_clock::now();
+    times[3][0] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    li = l.begin();
+    advance(li, l.size() / 2);
+
+    start = chrono::high_resolution_clock::now();
+
+    l.erase(li);
+
+    end = chrono::high_resolution_clock::now();
+    times[3][1] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    set<string>::iterator si = s.begin();
+    advance(si, s.size() / 2);
+
+    start = chrono::high_resolution_clock::now();
+
+    s.erase(si);
+
+    end = chrono::high_resolution_clock::now();
+    times[3][2] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
     
 
     return 0;
 }
-
-/* syntax examples:
-auto start = high_resolution_clock::now()
-auto end = high_resolution_clock::now()
-auto duration = duration_cast<milliseconds>(end - start)
-duration.count() references elapsed milliseconds
-*/

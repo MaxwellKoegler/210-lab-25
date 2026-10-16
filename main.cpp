@@ -75,7 +75,16 @@ int main() {
     end = chrono::high_resolution_clock::now();
     times[1][0] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 
+    start = chrono::high_resolution_clock::now();
 
+    l.sort();
+
+    end = chrono::high_resolution_clock::now();
+    times[1][1] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    times[1][2] = -1;
+
+    
 
     return 0;
 }

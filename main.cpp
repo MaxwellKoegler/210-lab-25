@@ -76,13 +76,27 @@ int main() {
     times[1][0] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 
     start = chrono::high_resolution_clock::now();
-
     l.sort();
-
     end = chrono::high_resolution_clock::now();
     times[1][1] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
-
     times[1][2] = -1;
+
+    start = chrono::high_resolution_clock::now();
+    v.insert(v.begin() + v.size() / 2, "test");
+    end = chrono::high_resolution_clock::now();
+    times[2][0] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    list<string>::iterator li = l.begin();
+    advance(li, l.size() / 2);
+    start = chrono::high_resolution_clock::now();
+    l.insert(li, "test");
+    end = chrono::high_resolution_clock::now();
+    times[2][1] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
+
+    start = chrono::high_resolution_clock::now();
+    s.insert("test");
+    end = chrono::high_resolution_clock::now();
+    times[2][2] = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 
     
 
